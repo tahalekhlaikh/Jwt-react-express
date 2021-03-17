@@ -33,8 +33,8 @@ class App extends Component {
     return (
           <Router>
             <div>
-              <Navbar bg="dark" expand="lg" variant="dark">
-                <Navbar.Brand>Popularity app</Navbar.Brand>
+              <Navbar bg="info" expand="lg" variant="dark">
+                <Navbar.Brand>Test app</Navbar.Brand>
                 <Nav className="mr-auto">
                   <Nav.Link as={Link} to="/">
                     List users
