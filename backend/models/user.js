@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const uniqueValidator = require('mongoose-unique-validator');
 const bcrypt = require('bcryptjs');
-
+const Roles = require('../../backend/models/roles');
 const UserSchema = new mongoose.Schema({
     username: {
         type: String,
@@ -22,6 +22,11 @@ const UserSchema = new mongoose.Schema({
         required: true,
         minlength: 8,
         select: false,
+    },
+    role: {
+        type: String,
+        default: Roles.user,
+        enum: [Roles.user, Roles.Admin] // Accept only these roles
     },
 });
 
